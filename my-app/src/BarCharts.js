@@ -28,7 +28,7 @@ export default function BarCharts({ selectedInstitution }) {
   return (
     <ScrollView >
       <Text style={styles.title}>Graduações</Text>
-      <BarChart style={styles.container}
+      <BarChart
         horizontal
         barWidth={22}
         barBorderRadius={4}
@@ -36,8 +36,9 @@ export default function BarCharts({ selectedInstitution }) {
         data={barData}
         yAxisThickness={0}
         xAxisThickness={0}
-        height={100} // Ajustar a altura conforme necessário
-        yAxisMaxValue={100}
+        height={300} // Ajustar a altura conforme necessário
+        maxValue={80}
+        stepHeight={35}
       />
     </ScrollView>
   );
